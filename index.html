@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For My Baby 🌸</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+      body {
+        margin: 0;
+        background-color: #FFFDF9;
+        overflow-x: hidden;
+      }
+      .font-serif-aesthetic {
+        font-family: 'Playfair Display', serif;
+      }
+      .font-letter {
+        font-family: 'Cormorant Garamond', serif;
+        line-height: 1.8;
+      }
+      .font-soft {
+        font-family: 'Quicksand', sans-serif;
+      }
+      /* Custom petal animation */
+      @keyframes float {
+        0% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+        10% { opacity: 0.8; }
+        90% { opacity: 0.8; }
+        100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+      }
+      .petal {
+        position: fixed;
+        top: -10%;
+        pointer-events: none;
+        z-index: 10;
+        animation: float linear infinite;
+      }
+
+      /* Slow Rotation Sway */
+      @keyframes sway {
+        0%, 100% { transform: rotate(-3deg); }
+        50% { transform: rotate(3deg); }
+      }
+      .animate-sway {
+        display: inline-block;
+        animation: sway 4s ease-in-out infinite;
+      }
+
+      /* Typing Animation */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #f472b6; }
+      }
+      .typing-effect {
+        display: inline-block;
+        overflow: hidden;
+        white-space: nowrap;
+        border-right: 2px solid transparent;
+        animation: 
+          typing 3s steps(30, end) forwards,
+          blink-caret 0.75s step-end infinite;
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Word Popping Animation */
+      @keyframes pop-in {
+        0% { opacity: 0; transform: translateY(8px) scale(0.95); }
+        100% { opacity: 1; transform: translateY(0) scale(1); }
+      }
+      .animate-word-pop {
+        display: inline-block;
+        animation: pop-in 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
